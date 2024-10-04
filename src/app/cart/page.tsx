@@ -1,50 +1,4 @@
-// "use client"; // Marks this file as a client component
 
-// import { useSelector, useDispatch } from 'react-redux';
-// import { RootState } from '../../redux/store';
-// import { removeFromCart, decrementQuantity } from '../../redux/cartSlice';
-// import Link from 'next/link';
-
-// const Cart = () => {
-//   const cart = useSelector((state: RootState) => state.cart.products);
-//   const dispatch = useDispatch();
-
-//   return (
-//     <div>
-//       <Link href="/" className="text-blue-500">
-//         Go back to shopping
-//       </Link>
-//       <h1 className="text-2xl font-bold">Your Cart</h1>
-//       <div>
-//         {cart.map((product) => (
-//           <div key={product.id} className="border p-4 flex justify-between items-center">
-//             <div>
-//               <h2>{product.title}</h2>
-//               <p>${product.price}</p>
-//               <p>Quantity: {product.quantity}</p>
-//             </div>
-//             <div>
-//               <button
-//                 className="bg-red-500 text-white p-2"
-//                 onClick={() => dispatch(removeFromCart(product.id))}
-//               >
-//                 Remove
-//               </button>
-//               <button
-//                 className="bg-yellow-500 text-white p-2 ml-2"
-//                 onClick={() => dispatch(decrementQuantity(product.id))}
-//               >
-//                 Decrease Quantity
-//               </button>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Cart;
 
 "use client";
 // import "./globals.css"
@@ -88,7 +42,7 @@ const CartPage = () => {
                 </div>
                 <button
                   onClick={() => handleRemove(product.id)}
-                  className="w-full p-2 bg-red-500 text-white rounded"
+                  className="p-2 bg-red-500 text-white rounded w-30 h-30"
                 >
                   <FiTrash />
                 </button>
@@ -102,8 +56,6 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
-
 
 
 
