@@ -22,7 +22,7 @@ const CartPage = () => {
       <Header />
       <div className="p-4 max-w-7xl mx-auto">
         {cart.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <p><img src="https://cdn-icons-png.flaticon.com/128/16961/16961608.png"/><span>Your cart is empty</span>.</p>
         ) : (
           <>
             {/* Product Listing */}
@@ -52,7 +52,6 @@ const CartPage = () => {
                 </div>
               ))}
             </div>
-
             {/* Checkout Section */}
             <div className="bg-white p-6 shadow-md rounded-lg">
               <h2 className="text-2xl font-bold mb-4">Checkout</h2>
