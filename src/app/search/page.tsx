@@ -67,7 +67,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Product from '../../components/Product';
 import Header from '../../components/Header';
-import { useRouter } from 'next/router';
 
 interface Product {
   id: number;
@@ -76,9 +75,9 @@ interface Product {
   image: string;
 }
 
-const SearchPage = () => {
-  const router = useRouter();
-  const { query } = router.query; // Get the search query from the URL
+// Accept searchParams as a prop
+const SearchPage = ({ searchParams }: { searchParams: { query?: string } }) => {
+  const query = searchParams.query; // Get the search query from the URL
   const [products, setProducts] = useState<Product[]>([]);
   const [sortType, setSortType] = useState('default');
 
@@ -131,5 +130,6 @@ const SearchPage = () => {
 };
 
 export default SearchPage;
+
 
 
