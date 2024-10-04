@@ -45,7 +45,7 @@ const Header = () => {
       
       </nav>
       <Link href="/cart">
-        Cart ({cart.reduce((acc, product) => acc + product.quantity, 0)})
+        <span><img src="https://cdn-icons-png.flaticon.com/128/3144/3144456.png" height={"20px"} width={"20px"} className='mr-8'/></span>{cart.reduce((acc, product) => acc + product.quantity, 0)}
       </Link>
     </header>
   );

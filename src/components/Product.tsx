@@ -42,6 +42,7 @@ interface ProductProps {
     title: string;
     price: number;
     image: string;
+    quantity:number;
   };
 }
 
@@ -49,7 +50,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="border p-2 rounded-lg shadow-md bg-white w-250 h-200">
+    <div className="border p-2 rounded-lg shadow-md bg-white w-220 h-100">
       <img src={product.image} alt={product.title} className="w-full h-64 object-cover mb-4" />
       <h2 className="font-bold text-lg">{product.title}</h2>
       <p className="text-gray-600">${product.price}</p>
